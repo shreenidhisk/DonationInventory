@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "50f5ed09-fac6-4ce4-af09-0b143935cbce",
+		"name": "Donation Inventory API",
+		"description": "Postman collection for Donation Inventory Management REST API (Spring Boot + MongoDB) with security disabled",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48999355",
+		"_collection_link": "https://shreenidhik23-6573272.postman.co/workspace/Shreenidhi-Kulkarni's-Workspace~f862ac40-1e7e-41ec-8104-a403c66fbcc0/collection/48999355-50f5ed09-fac6-4ce4-af09-0b143935cbce?action=share&source=collection_link&creator=48999355"
+	},
+	"item": [
+		{
+			"name": "Register Donation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/donations/register?donor=Alice&type=Food&quantity=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"donations",
+						"register"
+					],
+					"query": [
+						{
+							"key": "donor",
+							"value": "Alice"
+						},
+						{
+							"key": "type",
+							"value": "Food"
+						},
+						{
+							"key": "quantity",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Record Distribution",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/donations/distribute?type=Food&quantity=30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"donations",
+						"distribute"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "Food"
+						},
+						{
+							"key": "quantity",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inventory Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/donations/reports/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"donations",
+						"reports",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Donor Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/donations/reports/donors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"donations",
+						"reports",
+						"donors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Donations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/donations/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"donations",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
